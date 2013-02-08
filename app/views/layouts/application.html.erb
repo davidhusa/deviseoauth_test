@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DeviseomniauthTest</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="flash">
+  <% flash.each do |flash_type, value| %>
+    <div class="subflash" id = "flash_<%=flash_type%>">
+      <%= value %>
+    </div>
+  <% end %>
+</div>
+
+<%= yield %>
+
+</body>
+</html>

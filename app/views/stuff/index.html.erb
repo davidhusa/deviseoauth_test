@@ -1,0 +1,14 @@
+<h1>Hello World</h1>
+
+<div id="stuff">
+  <% @stuff.each_with_index do |stuff, index| %>
+    <div class="thing" id="thing_<%=index+1%>">
+      <div class="title" id="title_<%=index+1%>">
+        #<%= index + 1 %>: <%= stuff.title %>
+      </div>
+      <div class="text" id="text_<%=index+1%>">
+        <%= stuff.text %>
+      </div>
+    </div>
+  <% end %>
+</div>
