@@ -1,6 +1,6 @@
 class StuffController < ApplicationController
+  before_filter :authenticate_user!
   def index
     @stuff = Stuff.all
-    flash[:notice]="test"
   end
 end

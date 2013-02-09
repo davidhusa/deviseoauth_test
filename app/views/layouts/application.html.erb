@@ -7,6 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <% if !user_signed_in? %>
+    <div id = "login">
+      <%= link_to "Sign up", new_user_registration_path %> |
+      <%= link_to "Sign in", new_user_session_path %>
+    </div>
+  <% elsif not_a_login_screen? %>
+    <div id = "login">
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    </div>
+  <% end %>
+
 <div id="flash">
   <% flash.each do |flash_type, value| %>
     <div class="subflash" id = "flash_<%=flash_type%>">
@@ -14,7 +26,7 @@
     </div>
   <% end %>
 </div>
-
+<!-- <%= @current_controller + "#" + @current_action %> -->
 <%= yield %>
 
 </body>

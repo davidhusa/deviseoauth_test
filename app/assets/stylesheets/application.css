@@ -11,3 +11,25 @@
  *= require_self
  *= require_tree .
  */
+html, body {margin:0;padding:0;} 
+
+#login{
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: green;
+  width: 7em;
+  margin: .5em;
+  text-align: center;
+  color: white;
+}
+#login a{
+  color: white;
+  text-decoration: none;
+}
+#flash_notice{
+  background-color: green;
+}
+#flash_alert{
+  background-color: red;
+}

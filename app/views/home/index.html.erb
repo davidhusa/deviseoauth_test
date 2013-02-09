@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+  <h1>Welcome <%= current_user.email %></h1>
+<% else %>
+  <h1>Howdy stranger!!!!</h1>
+<% end %>
+  <%= link_to "Stuff", stuff_path %>

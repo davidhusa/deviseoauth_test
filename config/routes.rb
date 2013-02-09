@@ -1,6 +1,10 @@
 DeviseomniauthTest::Application.routes.draw do
 
-  root :to => "stuff#index"
+  devise_for :users
+
+  root :to => "home#index"
+
+  match "stuff" => "stuff#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
